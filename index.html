@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sara Puja Kesuma</title>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/932f5d16c1.js" crossorigin="anonymous"></script>
+  
+    <!-- JS -->
+    <script>
+        tailwind.config = {
+          theme: {
+            container: {
+                    center: true,
+                    padding: '16px',
+                },
+
+            extend: {
+              screens: {
+                '2xl': '1320px',
+              },
+              colors: {
+                maroon: '#800000',
+                darkScarlet: '#550E0E',
+                jasper: '#D44747',
+                coralPink: '#FF8080',
+                melon: '#FFAAAA',
+                pastelPink: '#FFD4D4',
+                // maroon50: ['#800000', {
+                //     opacity: '50'
+                // }],
+              },
+              fontSize: {
+                'heading-1': ['48px', {
+                    fontWeight: '700',
+                }],
+                'heading-2': ['36px', {
+                    fontWeight: '600',
+                }],
+                'heading-3': ['28px', {
+                    fontWeight: '500',
+                }],
+                'heading-4': ['24px', {
+                    fontWeight: '500',
+                }],
+                'heading-5': ['20px', {
+                    fontWeight: '600',
+                }],
+                'text-body': ['16px', {
+                    fontWeight: '400',
+                }],
+                'small-text': ['14px', {
+                    fontWeight: '400',
+                }],
+              },
+            },
+          },
+          plugins: [],
+        };
+      </script>
+    
+    <!-- CSS -->
+    <style type="text/tailwindcss">
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-inter{
+            font-family: 'Inter', sans-serif;
+        }
+    
+        /* navbar */
+        .navbar-fixed {
+            @apply fixed z-[50] bg-maroon bg-opacity-75;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            backdrop-filter: blur(5px);
+            box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+        }
+    
+        .hamburger-line {
+            @apply w-[30px] h-[2px] my-2 block bg-darkScarlet
+        }
+        
+        .hamburger-active > span:nth-child(1) {
+            @apply rotate-45;
+        }
+        
+        .hamburger-active > span:nth-child(2) {
+            @apply scale-0;
+        }
+    
+        .hamburger-active > span:nth-child(3) {
+            @apply -rotate-45;
+        }
+
+    </style>
+
+  </head>
+  
+  <body class="bg-pastelPink overflow-x-hidden">
+    <!-- Header Section Start -->
+    <header id="header" class="bg-maroon bg-opacity-15 absolute w-full h-[100px] flex items-center z-10">
+        <div class="container md:px-16">
+            <div class="flex items-center justify-between relative">
+                <div id="logo" class="text-darkScarlet text-heading-2 items-center transition-colors duration-300">
+                    <a href="#home" class="block py-4 sm:w-52 lg:w-60">sarapuja</a>
+                </div>
+                <div class="flex items-center justify-center px-3">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-5 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <nav id="nav-menu" class="hidden absolute py-2 shadow-lg rounded-lg max-w-[200px] w-full right-3 top-full bg-jasper bg-opacity-90 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <ul class="block text-heading-3 lg:flex">
+                            <li class="group">
+                                <a href="#home" class="nav-link text-base text-darkScarlet py-2 mx-5 flex group-hover:text-coralPink" data-target="home">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#aboutMe" class="nav-link text-base text-darkScarlet py-2 mx-5 flex group-hover:text-coralPink" data-target="aboutMe">About</a>
+                            </li>
+                            <li class="group">
+                                <a href="#portfolio" class="nav-link text-base text-darkScarlet py-2 mx-5 flex group-hover:text-coralPink" data-target="portfolio">Portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a href="#certificate" class="nav-link text-base text-darkScarlet py-2 mx-5 flex group-hover:text-coralPink" data-target="certificate">Certificate</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact" class="nav-link text-base text-darkScarlet py-2 mx-5 flex group-hover:text-coralPink" data-target="contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Home Start -->
+     <section id="home" class="home-page container relative pt-[120px] pb-[150px]">
+        <div class="home h-[461px] py-2 text-center lg:px-[170px] lg:py-[63px] lg:grid lg:grid-cols-2 lg:column-2 lg:gap-10">
+
+            <div class="home-picture relative flex justify-center lg:block">
+                <img src="img/profil.png" alt="Sara Puja"class="profile-picture absolute w-[320px] lg:w-[250px] border-2 border-dashed border-maroon z-100" >
+                <span class="hidden absolute text-heading-1 text-left font-bold text-melon opacity-25 lg:block lg:-top-[40px] lg:ps-[170px] z-0">UI/UX<br>Designer</span>
+            </div>
+
+            <div class="home-detail flex flex-wrap justify-center py-[80px] lg:py-0 lg:block">
+                <!-- big ball / 100px-->
+                 <div class="absolute top-[170px] right-[120px] w-[100px] h-[100px] rounded-full bg-melon opacity-25 z-0"></div>
+                 <div class="absolute top-[180px] right-[580px] w-[100px] h-[100px] rounded-full bg-melon opacity-25 z-0 lg:hidden xl:block"></div>
+                 <div class="hidden absolute bottom-[200px] right-[280px] w-[100px] h-[100px] rounded-full bg-melon opacity-25 z-0 lg:block"></div>
+                 
+                 <!-- medium ball / 50px-->
+                 <div class="absolute top-[120px] right-[250px] w-[50px] h-[50px] rounded-full bg-melon opacity-25 z-0 lg:block"></div>
+                 <div class="hidden absolute top-[240px] right-[350px] w-[50px] h-[50px] rounded-full bg-melon opacity-25 z-0 lg:block"></div>
+                 <div class="hidden absolute bottom-[330px] right-[380px] w-[50px] h-[50px] rounded-full bg-melon opacity-25 z-0 lg:block"></div>
+                 <div class="absolute bottom-[220px] right-[650px] w-[50px] h-[50px] rounded-full bg-melon opacity-25 z-0 lg:hidden xl:block"></div>
+                 
+                 <!-- medium ball / 70px -->
+                 <div class="absolute top-[120px] right-[450px] w-[70px] h-[70px] rounded-full bg-melon opacity-25 z-0"></div>
+                 <div class="absolute bottom-[250px] right-[120px] w-[70px] h-[70px] rounded-full bg-melon opacity-25 z-0"></div>
+                 <div class="absolute bottom-[300px] right-[570px] w-[70px] h-[70px] rounded-full bg-melon opacity-25 z-0 lg:hidden xl:block"></div>
+                 
+                 <!-- mini ball -->
+                 <div class="hidden absolute top-[180px] right-[310px] w-[20px] h-[20px] rounded-full bg-melon opacity-25 z-0 lg:block"></div>
+                 <div class="absolute top-[300px] right-[50px] w-[20px] h-[20px] rounded-full bg-melon opacity-25 z-0"></div>
+                 <div class="absolute top-[280px] right-[540px] w-[20px] h-[20px] rounded-full bg-melon opacity-25 z-0"></div>
+                 <div class="absolute bottom-[350px] right-[180px] w-[20px] h-[20px] rounded-full bg-melon opacity-25 z-0 lg:block"></div>
+                 <div class="absolute bottom-[280px] right-[510px] w-[20px] h-[20px] rounded-full bg-melon opacity-25 z-0"></div>
+                 <div class="absolute bottom-[200px] right-[600px] w-[20px] h-[20px] rounded-full bg-melon opacity-25 z-0 lg:hidden lg:block"></div>
+                 <div class="absolute bottom-[180px] right-[430px] w-[20px] h-[20px] rounded-full bg-melon opacity-25 z-0 lg:block"></div>
+                
+                <div class="profile-text relative">
+                    <p class="text-right text-jasper">Hello I'm</p>
+                    <h1 class="text-heading-1 text-right text-maroon">Sara Puja Kesuma</h1>
+                    <p class="profesi text-heading-2 text-center text-jasper">UI/UX Designer</p>
+                </div>
+                
+                <div class="button relative md:flex lg:flex-wrap gap-5 pt-[70px] md:pt-[30px] justify-center">
+                    <div class="cv-button ">
+                        <button class="rounded-full h-[30px] text-heading-5 bg-darkScarlet w-[200px] text-melon"><i class="fa-solid fa-download pe-2"></i>Download CV</button>
+                    </div>
+                    <div class="media-btn pt-3 md:pt-0">
+                        <a href=""><i class="fa-brands fa-figma text-3xl text-melon md:text-jasper lg:text-darkScarlet px-1"></i></a>
+                        <a href=""><i class="fa-brands fa-github text-3xl text-melon md:text-jasper lg:text-darkScarlet px-1"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin text-3xl text-melon md:text-jasper lg:text-darkScarlet px-1"></i></a>
+                        <a href=""><i class="fa-brands fa-dribbble text-3xl text-melon md:text-jasper lg:text-darkScarlet px-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Home End -->
+
+    <!-- About Start -->
+    <section id="aboutMe" class="about-page container py-[150px] flex items-center justify-center">
+        <div class="w-full rounded-lg">
+        
+            <!-- Tabs Button -->
+            <div id="tabs" class="flex space-x-1">
+              <button class="tab-button px-4 py-2 rounded-t-md bg-maroon text-melon text-heading-3 active" data-tab="about">About Me</button>
+              <button class="tab-button px-4 py-2 rounded-t-md bg-maroon opacity-50 text-melon text-heading-4" data-tab="edu">Education</button>
+              <button class="tab-button px-4 py-2 rounded-t-md bg-maroon opacity-50 text-melon text-heading-4" data-tab="exp">Experiences</button>
+            </div>
+        
+            <!-- Tabs Content -->
+            <div id="tab-contents" class="bg-maroon text-pastelPink p-4 rounded-r-lg rounded-bl-lg">
+            
+              <!-- About Me -->
+              <div id="about" class="tab-content">
+                <p class="mb-2 text-heading-4">I'm an Associate Degree Information Systems graduate.</p>
+                <p class="text-body">Now I work as an administrative staff in one of the professional certification agencies.<br>
+                During my work I continue to learn the IT world, one of which is UI/UX design, so that I am interested and learn more about UI/UX with Figma.<br>
+                Now I have an interest in working as a UI/UX designer to deepen and understand and add work experience as an UI/UX designer.</p>
+              </div>
+              
+              <!-- Education -->
+              <div id="edu" class="tab-content hidden">
+                <p class="text-heading-4">D3 Information System</p>
+                <p class="text-body">Bina Sarana Informatika University<br>
+                GPA: 3.97</p>
+              </div>
+            
+              <!-- Experiences -->
+              <div id="exp" class="tab-content hidden">
+                <!-- Administration Officer -->
+                <div class="flex flex-wrap pb-3 border-b border-jasper lg:flex-none lg:grid lg:grid-cols-3 lg:gap-4">
+                    <div class="job-location pb-5 text-center w-full lg:text-left">
+                        <p class="text-heading-4">LSP Edukademi</p>
+                        <p class="text-body">Special Region of Yogyakarta</p>
+                    </div>
+                    <div class="job">
+                        <div class="job-title pb-2">
+                            <p class="text-heading-5">Administration Officer (Contract)</p>
+                            <p class="text-small-text">July 2024 - Now</p>
+                        </div>
+                        <div class="job-description pb-3">
+                            <ul class="list-disc ps-5">
+                                <li>Make a photo pass of the assessee who carried out the competency test</li>
+                                <li>Make competency cards for assessee who are declared competent</li>
+                                <li>Packing certificates that will be sent to TUK or assessees</li>
+                                <li>Checking the recapitulation of assessment data that has been registered on the assessment schedule</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="job-title pb-2">
+                            <p class="text-heading-5">Administration Officer (Contract)</p>
+                            <p class="text-small-text">July 2024 - Now</p>
+                        </div>
+                        <div class="job-description pb-3">
+                            <ul class="list-disc ps-5">
+                                <li>Creating schedule codes by inputting assessment schedules on the BNSP website.</li>
+                                <li>Inputting new TUK (Competency Test Site) data on the BNSP website.</li>
+                                <li>Inputting the certificate number of assessment participants on the BNSP website</li>
+                                <li>Create an assessor assignment letter based on the schedule and the name of the assessee that has been determined</li>
+                                <li>Recap assessment data that has been registered on the assessment schedule</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Front End Web Dev -->
+                <div class="flex flex-wrap py-5 border-b border-jasper lg:flex-none lg:grid lg:grid-cols-3 lg:gap-4">
+                    <div class="job-location pb-5 text-center w-full lg:text-left">
+                        <p class="text-heading-4">Yogyakarta City Communication, Informatics and Encoding Office</p>
+                        <p class="text-body">Special Region of Yogyakarta</p>
+                    </div>
+                    <div class="job">
+                        <div class="job-title pb-2">
+                            <p class="text-heading-5">Front End Web Developer (Internship)</p>
+                            <p class="text-small-text">April 2023 - June 2023</p>
+                        </div>
+                        <div class="job-description pb-3">
+                            <ul class="list-disc ps-5">
+                                <li>Develop the design of the Internship Registration Application Information System into the Design of the Internship Application Information System (SI AMANG) at the Communication Informatics and Encoding Office of Yogyakarta City.</li>
+                                <li>Perform unit tests to ensure code integrity and reduce the number of bugs found in the project.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="job">
+                        <div class="job-title pb-2">
+                            <p class="text-heading-5">Front End Web Developer (Internship)</p>
+                            <p class="text-small-text">September 2022 - December 2022</p>
+                        </div>
+                        <div class="job-description pb-3">
+                            <ul class="list-disc ps-5">
+                                <li>Building a Website-Based Internship Registration Application Information System Design at DISKOMINFOSAN Yogyakarta City with CodeIgniter 4 Framework</li>
+                                <li>Using HTML, CSS, and JavaScript to create a dynamic and interactive user interface that enhances the user experience.</li>
+                                <li>Utilizing a version control system such as Git to manage code changes and collaborate with other developers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- About End -->
+
+    <!-- Portfolio Start -->
+    <section id="portfolio" class="portfolio container py-[150px]">
+        <!-- Tabs -->
+        <div class="text-center pb-[58px]">
+            <span class="bg-maroon text-heading-3 text-pastelPink px-4 py-1 rounded-full">Portfolio</span>
+            <div class="mt-3">
+                <button onclick="showTab('uiux')" id="tab-uiux" class="text-maroon text-heading-5 hover:opacity-100">UI/UX Design</button>
+                <span class="text-heading-5 text-darkScarlet">|</span>
+                <button onclick="showTab('projects')" id="tab-projects" class="text-maroon text-heading-5 opacity-50 hover:opacity-100">Projects</button>
+            </div>
+        </div>
+
+        <!-- UI/UX Design Content -->
+         <div id="content-uiux">
+            <div class="flex flex-col md:flex-row mb-12 gap-6">
+                <img src="img/uiux/Travel.png" alt="Mora Traveling" class="rounded-xl w-full md:w-1/2 object-cover md:order-2">
+                <div class="md:w-1/2 text-maroon md:order-1">
+                    <p class="text-heading-3">Mora Traveling</p>
+                    <p class="text-heading-5">Website Travel Apps Design</p>
+                    <p class="text-body pt-3">Mora Travel is a UI/UX study case I created for a web-based flight and train ticket booking application. The app helps users easily browse schedules, select departure times and train seats, and complete payments—all through a simple and intuitive interface designed to improve the booking experience.</p>
+                    <div class="mt-5 opacity-70 text-base hover:text-darkScarlet hover:opacity-100">
+                        <a href="https://www.figma.com/proto/FdJIUIlrd3tBJFJC91axTe?node-id=0-1&t=ETvOpt7QWDCngvuc-6" target="_blank"><i class="fa-solid fa-arrow-left"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row mb-12 gap-6">
+                <img src="img/uiux/FoodApp.png" alt="Delivery Food Apps" class="rounded-xl w-full md:w-1/2 object-cover">
+                <div class="md:w-1/2 text-maroon">
+                    <p class="text-heading-3">Delivery Food Apps</p>
+                    <p class="text-heading-5">Mobile Apps Design</p>
+                    <p class="text-body pt-3">This food app is a UI/UX design study case I created as part of my design practice. The app features a variety of food and drink options available for online ordering. Users can search for their desired meals and specify the delivery location through an easy-to-use mobile interface.</p>
+                    <div class="mt-5 text-right opacity-70 text-base hover:text-darkScarlet hover:opacity-100">
+                        <a href="https://www.figma.com/proto/3HMkACn9obbtbjx66Ypg30?node-id=0-1&t=ETvOpt7QWDCngvuc-6" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row mb-12 gap-6">
+                <img src="img/uiux/Bedsheet.png" alt="Mamong Bedsheet" class="rounded-xl w-full md:w-1/2 object-cover md:order-2">
+                <div class="md:w-1/2 text-maroon md:order-1">
+                    <p class="text-heading-3">Mamong's Bedsheet Landing Page</p>
+                    <p class="text-heading-5">Company Profile Design</p>
+                    <p class="text-body pt-3">The Mamong Bedsheet design was created as an improvement after the initial simple website was developed. This UI/UX design aims to enhance the previous website by making it more visually appealing and user-friendly.</p>
+                    <div class="mt-5 opacity-70 text-base hover:text-darkScarlet hover:opacity-100">
+                        <a href="https://www.figma.com/proto/szHJWrkjKtQ122oxPs716R/Mamong-Bedsheet-Website-Landing-Page?node-id=8-15&t=ETvOpt7QWDCngvuc-0&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=8%3A15" target="_blank"><i class="fa-solid fa-arrow-left"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row mb-12 gap-6">
+                <img src="img/uiux/MovieApp.png" alt="Ticketing Movie Apps" class="rounded-xl w-full md:w-1/2 object-cover">
+                <div class="md:w-1/2 text-maroon">
+                    <p class="text-heading-3">Ticketing Movie Apps</p>
+                    <p class="text-heading-5">Mobile Apps Design</p>
+                    <p class="text-body pt-3">This ticketing movie app design is the first UI/UX project I created. I learned the basics through self-study on YouTube and then developed my own version inspired by online cinema ticket booking applications.</p>
+                    <div class="mt-5 text-right opacity-70 text-base hover:text-darkScarlet hover:opacity-100">
+                        <a href="https://www.figma.com/proto/kjY7cme2QSa9f9uLOsUhEV?node-id=0-1&t=ETvOpt7QWDCngvuc-6" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <!-- Projects Content -->
+          <div id="content-projects" class="hidden">
+            <div class="flex flex-col md:flex-row mb-12 gap-6">
+                <img src="img/projects/codemora.png" alt="Web Project" class="rounded-xl w-full md:w-1/2 object-cover">
+                <div class="md:w-1/2 text-maroon">
+                    <p class="text-heading-2">CodeMora</p>
+                    <p class="text-heading-5">Company Profile Website</p>
+                    <p class="text-body opacity-80">Frontend Developer</p>
+                    <p class="text-body pt-3">Codemora is a company profile website that showcases the company's services, past projects, tools used, pricing, and contact information. It’s designed with a clean and modern layout to ensure a professional and user-friendly experience.
+                    <br>As the UI/UX designer, I was responsible for crafting the layout and visual experience of the website, ensuring clear navigation and aesthetic consistency across all sections.</p>
+                    <div class="mt-5 text-right opacity-70 text-base hover:text-darkScarlet hover:opacity-100">
+                        <a href="https://github.com/LeonaStrive/codemora.git" target="_blank">Repository <i class="fa-solid fa-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row mb-12 gap-6">
+                <img src="img/projects/mamong.png" alt="Web Project" class="rounded-xl w-full md:w-1/2 object-cover md:order-2">
+                <div class="md:w-1/2 text-maroon">
+                    <p class="text-heading-2">Mamong's Bedsheet</p>
+                    <p class="text-heading-5">Company Profile Website</p>
+                    <p class="text-body opacity-80">Frontend Developer</p>
+                    <p class="text-body pt-3">Mamong Bedsheet is a personal website project inspired by my mother's handmade bedsheets. It was created to showcase fabric patterns, a catalog of past orders, and pricing information. This study case aims to present handmade products in a simple, warm, and professional way.</p>
+                    <div class="mt-5 opacity-70 text-base hover:text-darkScarlet hover:opacity-100">
+                        <a href="https://github.com/LeonaStrive/mamongBedsheet.git" target="_blank"><i class="fa-solid fa-arrow-left"></i>Repository</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row mb-12 gap-6">
+                <img src="img/projects/siamang.png" alt="Web Project" class="rounded-xl w-full md:w-1/2 object-cover">
+                <div class="md:w-1/2 text-maroon">
+                    <p class="text-heading-2">SI AMANG</p>
+                    <p class="text-heading-5">Web Based Application</p>
+                    <p class="text-body opacity-80">Frontend Developer</p>
+                    <p class="text-body pt-3">Si Amang (Sistem Informasi Aplikasi Magang) is a web-based application developed as a group final project for the Diploma 3 Information Systems program. Created for the Department of Communication and Informatics (DISKOMINFOSAN) of Yogyakarta, it facilitates internship registration, activity tracking, and report submission. I contributed as the wireframe designer and front-end developer, focusing on creating a user-friendly interface.</p>
+                    <div class="mt-5 text-right opacity-70 text-base hover:text-darkScarlet hover:opacity-100">
+                        <a href="https://github.com/LeonaStrive/siamang.git" target="_blank">Repository <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- More -->
+           <!-- <div class="text-center pt-[100px]">
+            <a href="#" class="text-small-text text-jasper cursor-pointer">more <i class="fa-solid fa-chevron-down"></i></a> -->
+           </div>
+    </section>
+    <!-- Portfolio Ends -->
+
+    <!-- Tools Start -->
+    <section id="tools" class="tools realtive overflow-hidden container-fluid py-[150px]">
+        <div class="flex justify-center gap-6 flex-wrap md:h-[200px] md:relative  md:gap-0 bg-maroon">
+            <div class="bg-coralPink text-darkScarlet text-heading-4 text-center rounded-full w-24 h-24 flex items-center justify-center md:absolute md:-bottom-5 md:w-28 md:h-28 md:left-0 lg:w-32 lg:h-32 lg:text-heading-3">Figma</div>
+            <div class="bg-coralPink text-darkScarlet text-heading-4 text-center rounded-full w-24 h-24 flex items-center justify-center md:absolute md:-top-8 md:w-28 md:h-28 md:left-[100px] lg:left-[200px] lg:w-32 lg:h-32 lg:text-heading-3">UI Design</div>
+            <div class="bg-coralPink text-darkScarlet text-heading-4 text-center rounded-full w-24 h-24 flex items-center justify-center md:absolute md:-bottom-8 md:w-28 md:h-28 md:left-[200px] lg:left-[400px] lg:w-32 lg:h-32 lg:text-heading-3">UX Design</div>
+            <div class="bg-coralPink text-darkScarlet text-heading-5 text-center rounded-full w-20 h-20 flex items-center justify-center md:absolute md:-top-5 md:w-28 md:h-28 md:left-[300px] lg:left-[600px] lg:w-32 lg:h-32 lg:text-heading-3">HTML</div>
+            <div class="bg-coralPink text-darkScarlet text-heading-4 text-center rounded-full w-20 h-20 flex items-center justify-center md:absolute md:bottom-0 md:w-28 md:h-28 md:right-[250px] lg:right-[380px] lg:w-32 lg:h-32 lg:text-heading-3">CSS</div>
+            <div class="bg-coralPink text-darkScarlet text-heading-5 text-center rounded-full w-28 h-28 flex items-center justify-center md:absolute md:-top-14 md:w-28 md:h-28 md:right-[140px] lg:right-[200px] lg:w-32 lg:h-32 lg:text-heading-4">Bootstrap</div>
+            <div class="bg-coralPink text-darkScarlet text-heading-5 text-center rounded-full w-28 h-28 flex items-center justify-center md:absolute md:right-0 md:w-28 md:h-28 md:top-[100px] lg:w-32 lg:h-32 lg:text-heading-3">Tailwind</div>
+        </div>
+    </section>
+    <!-- Tools End -->
+
+    <!-- Sertificate Start -->
+    <section id="certificate" class="certificate container py-[150px]">
+        <div class="text-center pb-[58px]">
+            <span class="px-4 py-1 bg-maroon text-pastelPink text-heading-3 rounded-full">Certificate</span>
+        </div>
+        <div class="container flex flex-wrap gap-6 justify-center pb-[100px]">
+            <img src="img/sertificates/uxdesign.jpg" alt="1" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/uidesign.jpg" alt="2" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/alibaba.png" alt="3" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/basisdata.jpg" alt="4" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/uiux.jpg" alt="5" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/revou.jpg" alt="6" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/serkom.jpg" alt="7" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/database.jpg" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px]">
+            <img src="img/sertificates/pcap.jpg" alt="9" class="thumbnail w-full rounded cursor-pointer hover:scale-105 transition md:w-[350px] md:h-none">
+        </div>
+
+        <!-- Modal -->
+        <div id="imgModal" class="fixed inset-0 bg-black bg-opacity-80 z-[9999] hidden flex justify-center items-center">
+            <!-- Closed Button -->
+             <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl font-bold">&times;</button>
+            <!-- Navigation Button -->
+            <button id="prevBtn" class="absolute left-4 text-white text-4xl">&#10094;</button>
+            <img id="modalImage" src="" class="max-w-2xl max-h-[100vh] object-contain">
+            <button id="nextBtn" class="absolute right-4 text-white text-4xl">&#10095;</button>
+        </div>
+
+        <!-- More -->
+           <!-- <div class="text-center">
+            <a href="#" class="text-small-text text-jasper cursor-pointer">more <i class="fa-solid fa-chevron-down"></i></a>
+           </div> -->
+    </section>
+    <!-- Sertificate End -->
+
+    <!-- Contact Start  -->
+     <section id="contact" class="contact py-[150px] bg-maroon">
+        <div class="text-center pb-[58px] lg:hidden">
+            <span class="px-4 py-1 bg-pastelPink text-maroon text-heading-3 rounded-full">Contact</span>
+        </div>
+        <div class="lg:grid lg:grid-cols-2 mx-auto justify-items-center">
+            <div class="maps items-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.97085556217!2d110.33364480212217!3d-7.803248457427315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Kota%20Yogyakarta%2C%20Daerah%20Istimewa%20Yogyakarta!5e0!3m2!1sid!2sid!4v1747923137984!5m2!1sid!2sid" class="w-[550px] h-[377px] lg:w-[480px] xl:w-[644px]"  style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="lg:flex md:flex-wrap get-in-touch lg:mx-auto lg:justify-center">
+                <div class="contact-title py-[20px]">
+                    <p class="text-heading-4 text-pastelPink text-center">Get in touch</p>
+                </div>
+                <div class="contact-content lg:flex lg:flex-wrap  lg:justify-center lg:mx-auto">
+                    <div class="email flex items-center text-pastelPink my-[15px] mx-auto w-[250px] text-left">
+                        <i class="fa-solid fa-envelope text-heading-2 lg:text-heading-3 xl:text-heading-2"></i>
+                        <a href="mailto:sarapuja3109@gmail.com" target="_blank" class="text-body ps-3">sarapuja3109@gmail.com</a>
+                    </div>
+                    <div class="email flex items-center text-pastelPink my-[15px] mx-auto w-[250px] text-left">
+                        <i class="fa-brands fa-whatsapp text-heading-2 lg:text-heading-3 xl:text-heading-2"></i>
+                        <a href="https://api.whatsapp.com/send?phone=6287812505224" target="_blank" class="text-body ps-3">+62 851 7986 2331</a>
+                    </div>
+                    <div class="email flex items-center text-pastelPink my-[15px] mx-auto w-[250px] text-left">
+                        <i class="fa-brands fa-linkedin text-heading-2 lg:text-heading-3 xl:text-heading-2"></i>
+                        <a href="https://www.linkedin.com/in/sarapuja/" target="_blank" class="text-body ps-3">sarapuja</a>
+                    </div>
+                    <div class="email flex items-center text-pastelPink my-[15px] mx-auto w-[250px] text-left">
+                        <i class="fa-brands fa-instagram text-heading-2 lg:text-heading-3 xl:text-heading-2"></i>
+                        <a href="https://www.instagram.com/sarapuja/" target="_blank" class="text-body ps-3">sarapuja</a>
+                    </div>
+                    <div class="email flex items-center text-pastelPink my-[15px] mx-auto w-[250px] text-left">
+                        <i class="fa-brands fa-figma text-heading-2 lg:text-heading-3 xl:text-heading-2"></i>
+                        <a href="https://www.figma.com/@leonastrive" target="_blank" class="text-body ps-3">LeonaStrive</a>
+                    </div>
+                    <div class="email flex items-center text-pastelPink my-[15px] mx-auto w-[250px] text-left">
+                        <i class="fa-brands fa-github text-heading-2 lg:text-heading-3 xl:text-heading-2"></i>
+                        <a href="https://github.com/LeonaStrive" target="_blank" class="text-body ps-3">LeonaStrive</a>
+                    </div>
+                    <div class="email flex items-center text-pastelPink my-[15px] mx-auto w-[250px] text-left">
+                        <i class="fa-brands fa-dribbble text-heading-2 lg:text-heading-3 xl:text-heading-2"></i>
+                        <a href="https://dribbble.com/leonastrive" target="_blank" class="text-body ps-3">LeonaStrive</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+     <footer id="footer">
+         <section class="footer py-2 bg-maroon">
+            <div class="text-center text-base text-jasper items-center">
+                <span>sarapuja</span>
+            </div>
+         </section>
+     </footer>
+    <!-- Footer End -->
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
